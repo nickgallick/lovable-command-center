@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion';
-import { agents, builds, deployments, spendData } from '@/data/mockData';
+import { agents, builds, deployments, spendData, alerts } from '@/data/mockData';
 
-const MetricChip = ({ label, value, color }: { label: string; value: string | number; color?: string }) => (
-  <div className="flex items-center gap-2 px-3 py-1.5 bg-surface-raised rounded-md border border-border">
+const MetricPill = ({ label, value, color }: { label: string; value: string | number; color: string }) => (
+  <div className="flex items-center gap-2 px-3 py-1.5 bg-card rounded-lg border border-border">
     <span className="label-xs">{label}</span>
-    <span className={`font-mono text-sm font-medium tabular-nums ${color || 'text-foreground'}`}>{value}</span>
+    <span className={`font-mono text-sm font-semibold tabular-nums ${color}`}>{value}</span>
   </div>
 );
 
@@ -12,30 +12,41 @@ export function TopBar() {
   const activeAgents = agents.filter(a => a.status === 'active').length;
   const activeBuilds = builds.filter(b => b.status === 'active').length;
   const healthyDeploys = deployments.filter(d => d.status === 'healthy').length;
+  const errors24h = alerts.filter(a => a.severity === 'critical' && !a.resolved).length;
+
+  const now = new Date();
+  const timeStr = now.toLocaleTimeString('en-US', { hour12: false, hour: '2-digit', minute: '2-digit', second: '2-digit' });
 
   return (
     <motion.header
       initial={{ opacity: 0, y: -10 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.4, ease: [0.2, 0.8, 0.2, 1] }}
-      className="h-12 flex items-center justify-between px-4 border-b border-border bg-surface/80 backdrop-blur-md z-40"
+      transition={{ duration: 0.3 }}
+      className="h-14 flex items-center justify-between px-4 border-b border-border bg-card/80 backdrop-blur-md z-40"
     >
-      <div className="flex items-center gap-3">
-        <div className="flex items-center gap-2">
-          <div className="w-2 h-2 rounded-full bg-cyan animate-pulse" />
-          <span className="font-mono text-xs font-semibold tracking-wider text-foreground">NERVE CENTER</span>
-        </div>
-        <span className="text-border">|</span>
-        <span className="label-xs">SYSTEM STATUS: OPERATIONAL</span>
+      {/* Left: Logo */}
+      <div className="flex items-center gap-2.5">
+        <div className="w-5 h-5 rotate-45 bg-primary rounded-sm" />
+        <span className="font-mono text-xs font-bold tracking-[0.15em] text-foreground">MISSION CONTROL</span>
       </div>
 
-      <div className="flex items-center gap-2">
-        <MetricChip label="AGENTS" value={`${activeAgents}/${agents.length}`} color="text-cyan" />
-        <MetricChip label="BUILDS" value={activeBuilds} color="text-amber" />
-        <MetricChip label="DEPLOYS" value={`${healthyDeploys}/${deployments.length}`} color="text-cyan" />
-        <MetricChip label="SPEND" value={`$${spendData.today.toFixed(2)}`} color="text-foreground" />
-        <div className="ml-2 flex items-center gap-1.5 px-2 py-1 rounded bg-surface-overlay cursor-pointer hover:bg-accent transition-colors">
-          <kbd className="text-[10px] font-mono text-muted-foreground border border-border rounded px-1">⌘K</kbd>
+      {/* Center: Metric Pills */}
+      <div className="hidden md:flex items-center gap-2">
+        <MetricPill label="AGENTS" value={`${activeAgents}/${agents.length}`} color="text-green" />
+        <MetricPill label="BUILDS" value={activeBuilds} color="text-yellow" />
+        <MetricPill label="DEPLOYS" value={`${healthyDeploys}/${deployments.length}`} color="text-green" />
+        <MetricPill label="SPEND" value={`$${spendData.today.toFixed(2)}`} color="text-foreground" />
+        <MetricPill label="ERRORS" value={errors24h} color={errors24h > 0 ? 'text-red' : 'text-green'} />
+      </div>
+
+      {/* Right: Clock + Model + Avatar */}
+      <div className="flex items-center gap-3">
+        <span className="font-mono text-xs text-muted-foreground tabular-nums">{timeStr}</span>
+        <span className="text-[10px] font-mono px-2 py-1 rounded-md bg-purple-dim text-purple border border-purple/20 font-medium">
+          SONNET 4.6
+        </span>
+        <div className="w-7 h-7 rounded-full bg-primary/20 border border-primary/30 flex items-center justify-center">
+          <span className="text-[10px] font-bold text-primary">N</span>
         </div>
       </div>
     </motion.header>

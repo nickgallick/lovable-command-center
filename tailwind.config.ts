@@ -12,8 +12,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['"Geist Sans"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
-        mono: ['"Geist Mono"', '"SF Mono"', '"Fira Code"', 'monospace'],
+        sans: ['"DM Sans"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+        display: ['"Space Grotesk"', 'sans-serif'],
+        mono: ['"JetBrains Mono"', '"SF Mono"', '"Fira Code"', 'monospace'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -49,14 +50,28 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // Status colors
         cyan: "hsl(var(--cyan))",
-        amber: "hsl(var(--amber))",
-        rose: "hsl(var(--rose))",
-        "slate-dim": "hsl(var(--slate-dim))",
-        "slate-bright": "hsl(var(--slate-bright))",
+        green: "hsl(var(--green))",
+        yellow: "hsl(var(--yellow))",
+        red: "hsl(var(--red))",
+        purple: "hsl(var(--purple))",
+        // Dim backgrounds
+        "green-dim": "hsl(var(--green-dim))",
+        "yellow-dim": "hsl(var(--yellow-dim))",
+        "red-dim": "hsl(var(--red-dim))",
+        "purple-dim": "hsl(var(--purple-dim))",
+        "blue-dim": "hsl(var(--blue-dim))",
+        // Text
+        "text-primary": "hsl(var(--text-primary))",
+        "text-secondary": "hsl(var(--text-secondary))",
+        "text-muted": "hsl(var(--text-muted))",
+        // Surfaces
         surface: "hsl(var(--surface))",
         "surface-raised": "hsl(var(--surface-raised))",
         "surface-overlay": "hsl(var(--surface-overlay))",
+        "surface-inset": "hsl(var(--surface-inset))",
+        // Sidebar
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
