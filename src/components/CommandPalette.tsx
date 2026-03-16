@@ -1,13 +1,15 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Search, GitBranch, Pause, Zap, OctagonX, RefreshCw } from 'lucide-react';
+import { Search, GitBranch, Pause, Zap, OctagonX, RefreshCw, Globe, Users } from 'lucide-react';
 
 const commands = [
-  { id: 'rebuild', label: 'Execute Rebuild', desc: 'Trigger fresh build for a project', icon: RefreshCw },
-  { id: 'pause', label: 'Pause All Builds', desc: 'Hold all running agent pipelines', icon: Pause },
-  { id: 'switch', label: 'Switch All to Opus', desc: 'Upgrade all agents to Opus model', icon: Zap },
-  { id: 'stop', label: 'Emergency Stop', desc: 'Terminate all running agents immediately', icon: OctagonX },
-  { id: 'flush', label: 'Deploy Queue Flush', desc: 'Push all pending deployments now', icon: GitBranch },
+  { id: 'rebuild', label: 'Execute Rebuild', desc: 'Trigger fresh build for a project', icon: RefreshCw, color: 'text-primary' },
+  { id: 'switch', label: 'Switch All to Opus', desc: 'Upgrade all agents to Opus model', icon: Zap, color: 'text-purple' },
+  { id: 'pause', label: 'Pause All Builds', desc: 'Hold all running agent pipelines', icon: Pause, color: 'text-yellow' },
+  { id: 'stop', label: 'Emergency Stop', desc: 'Terminate all running agents immediately', icon: OctagonX, color: 'text-red' },
+  { id: 'flush', label: 'Deploy Queue Flush', desc: 'Push all pending deployments now', icon: GitBranch, color: 'text-green' },
+  { id: 'deploy', label: 'View Deployments', desc: 'Check deployment health grid', icon: Globe, color: 'text-cyan' },
+  { id: 'agents', label: 'View Agent War Room', desc: 'Monitor all active agents', icon: Users, color: 'text-foreground' },
 ];
 
 export function CommandPalette() {
@@ -46,11 +48,11 @@ export function CommandPalette() {
             initial={{ opacity: 0, scale: 0.95, y: -10 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: -10 }}
-            transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-            className="w-full max-w-2xl bg-surface-raised border border-border shadow-2xl rounded-xl overflow-hidden"
+            transition={{ duration: 0.15 }}
+            className="w-full max-w-xl bg-card border border-border shadow-2xl rounded-xl overflow-hidden"
             onClick={e => e.stopPropagation()}
           >
-            <div className="flex items-center gap-3 px-4 py-3 border-b border-border">
+            <div className="flex items-center gap-3 px-4 py-3.5 border-b border-border">
               <Search className="w-4 h-4 text-muted-foreground" />
               <input
                 autoFocus
@@ -68,15 +70,15 @@ export function CommandPalette() {
                   className="w-full flex items-center gap-3 px-4 py-2.5 hover:bg-accent/50 transition-colors text-left"
                   onClick={() => setOpen(false)}
                 >
-                  <cmd.icon className="w-4 h-4 text-muted-foreground" />
-                  <div>
-                    <div className="text-sm text-foreground">{cmd.label}</div>
+                  <cmd.icon className={`w-4 h-4 ${cmd.color}`} />
+                  <div className="flex-1">
+                    <div className="text-sm text-foreground font-medium">{cmd.label}</div>
                     <div className="text-xs text-muted-foreground">{cmd.desc}</div>
                   </div>
                 </button>
               ))}
               {filtered.length === 0 && (
-                <div className="px-4 py-6 text-center text-sm text-muted-foreground">No commands found</div>
+                <div className="px-4 py-8 text-center text-sm text-muted-foreground">No commands found</div>
               )}
             </div>
           </motion.div>
