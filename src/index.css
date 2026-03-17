@@ -6,71 +6,71 @@
 
 @layer base {
   :root {
-    /* Mission Control Palette */
-    --background: 220 30% 6%;
-    --foreground: 214 32% 91%;
+    /* Warm Noir Palette */
+    --background: 20 14% 4%;
+    --foreground: 36 33% 90%;
 
-    --card: 220 30% 10%;
-    --card-foreground: 214 32% 91%;
+    --card: 20 10% 8%;
+    --card-foreground: 36 33% 90%;
 
-    --popover: 220 30% 10%;
-    --popover-foreground: 214 32% 91%;
+    --popover: 20 10% 8%;
+    --popover-foreground: 36 33% 90%;
 
-    --primary: 217 91% 60%;
-    --primary-foreground: 220 30% 6%;
+    --primary: 38 92% 50%;
+    --primary-foreground: 20 14% 4%;
 
-    --secondary: 220 28% 12%;
-    --secondary-foreground: 214 32% 91%;
+    --secondary: 20 8% 12%;
+    --secondary-foreground: 36 33% 90%;
 
-    --muted: 220 30% 10%;
-    --muted-foreground: 215 16% 65%;
+    --muted: 20 10% 10%;
+    --muted-foreground: 24 10% 55%;
 
-    --accent: 220 28% 12%;
-    --accent-foreground: 214 32% 91%;
+    --accent: 20 8% 14%;
+    --accent-foreground: 36 33% 90%;
 
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 217 33% 17%;
-    --input: 217 33% 20%;
-    --ring: 217 91% 60%;
+    --border: 24 12% 14%;
+    --input: 24 12% 17%;
+    --ring: 38 92% 50%;
 
     --radius: 0.5rem;
 
     /* Status Colors */
-    --cyan: 189 95% 43%;
-    --green: 142 71% 45%;
-    --yellow: 48 96% 47%;
-    --red: 0 84% 60%;
-    --purple: 271 91% 65%;
+    --cyan: 175 84% 40%;
+    --green: 152 69% 40%;
+    --yellow: 38 92% 50%;
+    --red: 0 72% 51%;
+    --purple: 280 68% 60%;
 
     /* Status dim backgrounds */
-    --green-dim: 142 50% 10%;
-    --yellow-dim: 48 50% 10%;
-    --red-dim: 0 50% 10%;
-    --purple-dim: 271 50% 10%;
-    --blue-dim: 217 50% 12%;
+    --green-dim: 152 40% 8%;
+    --yellow-dim: 38 40% 8%;
+    --red-dim: 0 40% 8%;
+    --purple-dim: 280 40% 8%;
+    --blue-dim: 175 40% 8%;
 
     /* Text hierarchy */
-    --text-primary: 214 32% 91%;
-    --text-secondary: 215 16% 65%;
-    --text-muted: 215 14% 47%;
+    --text-primary: 36 33% 90%;
+    --text-secondary: 24 10% 55%;
+    --text-muted: 20 8% 38%;
 
     /* Surface layers */
-    --surface: 220 30% 10%;
-    --surface-raised: 220 28% 12%;
-    --surface-overlay: 220 28% 14%;
-    --surface-inset: 220 33% 7%;
+    --surface: 20 10% 8%;
+    --surface-raised: 20 8% 11%;
+    --surface-overlay: 20 8% 14%;
+    --surface-inset: 20 12% 5%;
 
     /* Sidebar */
-    --sidebar-background: 220 30% 5%;
-    --sidebar-foreground: 215 16% 65%;
-    --sidebar-primary: 217 91% 60%;
-    --sidebar-primary-foreground: 220 30% 6%;
-    --sidebar-accent: 220 28% 12%;
-    --sidebar-accent-foreground: 214 32% 91%;
-    --sidebar-border: 217 33% 14%;
-    --sidebar-ring: 217 91% 60%;
+    --sidebar-background: 20 14% 3%;
+    --sidebar-foreground: 24 10% 55%;
+    --sidebar-primary: 38 92% 50%;
+    --sidebar-primary-foreground: 20 14% 4%;
+    --sidebar-accent: 20 8% 12%;
+    --sidebar-accent-foreground: 36 33% 90%;
+    --sidebar-border: 24 12% 11%;
+    --sidebar-ring: 38 92% 50%;
   }
 }
 
