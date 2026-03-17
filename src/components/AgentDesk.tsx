@@ -116,8 +116,8 @@ function DeskScene({ agent }: { agent: Agent }) {
       {/* Figurines */}
       {hasFigurines && (
         <>
-          <circle cx="30" cy="82" r="3" fill="hsl(280, 68%, 60%)" opacity="0.4" />
-          <rect x="28" y="85" width="4" height="3" rx="1" fill="hsl(280, 68%, 60%)" opacity="0.3" />
+          <circle cx="30" cy="82" r="3" fill="hsl(262, 83%, 58%)" opacity="0.4" />
+          <rect x="28" y="85" width="4" height="3" rx="1" fill="hsl(262, 83%, 58%)" opacity="0.3" />
         </>
       )}
     </svg>
