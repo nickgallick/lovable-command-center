@@ -2,10 +2,10 @@ import { motion } from 'framer-motion';
 import { Agent } from '@/data/mockData';
 
 const statusConfig = {
-  active: { border: 'border-primary/30', stripe: 'bg-green', screenFill: 'hsl(217, 91%, 60%)', screenOpacity: 0.8, dot: 'bg-green dot-glow-green', screenClass: 'screen-active' },
-  idle: { border: 'border-border', stripe: 'bg-muted-foreground', screenFill: 'hsl(217, 33%, 17%)', screenOpacity: 0.3, dot: 'bg-muted-foreground', screenClass: '' },
-  error: { border: 'border-red/30', stripe: 'bg-red', screenFill: 'hsl(0, 84%, 60%)', screenOpacity: 0.7, dot: 'bg-red dot-glow-red', screenClass: 'screen-error' },
-  offline: { border: 'border-border/50', stripe: 'bg-border', screenFill: 'hsl(220, 30%, 10%)', screenOpacity: 0.15, dot: 'bg-border', screenClass: '' },
+  active: { border: 'border-primary/30', stripe: 'bg-green', screenFill: 'hsl(38, 92%, 50%)', screenOpacity: 0.8, dot: 'bg-green dot-glow-green', screenClass: 'screen-active' },
+  idle: { border: 'border-border', stripe: 'bg-muted-foreground', screenFill: 'hsl(24, 12%, 14%)', screenOpacity: 0.3, dot: 'bg-muted-foreground', screenClass: '' },
+  error: { border: 'border-red/30', stripe: 'bg-red', screenFill: 'hsl(0, 72%, 51%)', screenOpacity: 0.7, dot: 'bg-red dot-glow-red', screenClass: 'screen-error' },
+  offline: { border: 'border-border/50', stripe: 'bg-border', screenFill: 'hsl(20, 10%, 8%)', screenOpacity: 0.15, dot: 'bg-border', screenClass: '' },
 };
 
 const modelBadge: Record<string, string> = {
