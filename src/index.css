@@ -212,6 +212,16 @@
     linear-gradient(to bottom, hsla(214, 18%, 89%, 0.5) 1px, transparent 1px);
   background-size: 20px 20px;
 }
+.dark .bg-grid {
+  background-image:
+    linear-gradient(to right, hsla(215, 20%, 18%, 0.6) 1px, transparent 1px),
+    linear-gradient(to bottom, hsla(215, 20%, 18%, 0.6) 1px, transparent 1px);
+}
+
+/* Scanline dark override */
+.dark .scanline::after {
+  background: linear-gradient(90deg, transparent, hsla(199, 89%, 48%, 0.1), transparent);
+}
 
 /* Scan Line Animation */
 @keyframes scanline {
