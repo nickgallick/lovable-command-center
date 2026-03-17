@@ -202,7 +202,7 @@ export function DeskSVG({ accent, state, personality, name }: DeskSVGProps) {
       )}
       {personality === 'dual-monitor' && (
         <g>
-          <rect x="155" y="44" width="18" height="30" rx="2" fill="hsl(210,20%,96%)" className="dark:fill-[hsl(215,25%,14%)]" stroke="hsl(214,18%,85%)" strokeWidth="1" className2="dark:stroke-[hsl(215,20%,20%)]" />
+          <rect x="155" y="44" width="18" height="30" rx="2" fill="hsl(210,20%,96%)" className="dark:fill-[hsl(215,25%,14%)]" stroke="hsl(214,18%,85%)" strokeWidth="1" />
           <rect x="157" y="46" width="14" height="26" rx="1" fill={screenColor} opacity={screenOpacity * 0.5} />
         </g>
       )}
