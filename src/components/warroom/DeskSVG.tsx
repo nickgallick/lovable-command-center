@@ -142,7 +142,7 @@ export function DeskSVG({ accent, state, personality, name }: DeskSVGProps) {
       )}
 
       {/* Keyboard */}
-      <rect x="55" y="116" width="70" height="12" rx="2" fill="hsl(214,18%,91%)" className="dark:fill-[hsl(215,20%,16%)]" stroke="hsl(214,18%,87%)" strokeWidth="0.5" className2="dark:stroke-[hsl(215,20%,20%)]" />
+      <rect x="55" y="116" width="70" height="12" rx="2" fill="hsl(214,18%,91%)" className="dark:fill-[hsl(215,20%,16%)]" stroke="hsl(214,18%,87%)" strokeWidth="0.5" />
       {isActive && (
         <g>
           <rect x="72" y="120" width="5" height="4" rx="1" fill={accent} opacity="0.3">
