@@ -6,71 +6,71 @@
 
 @layer base {
   :root {
-    /* Warm Noir Palette */
-    --background: 20 14% 4%;
-    --foreground: 36 33% 90%;
+    /* Sky Corporate Palette */
+    --background: 210 20% 98%;
+    --foreground: 215 25% 15%;
 
-    --card: 20 10% 8%;
-    --card-foreground: 36 33% 90%;
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 15%;
 
-    --popover: 20 10% 8%;
-    --popover-foreground: 36 33% 90%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 15%;
 
-    --primary: 38 92% 50%;
-    --primary-foreground: 20 14% 4%;
+    --primary: 199 89% 48%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 20 8% 12%;
-    --secondary-foreground: 36 33% 90%;
+    --secondary: 210 16% 93%;
+    --secondary-foreground: 215 25% 27%;
 
-    --muted: 20 10% 10%;
-    --muted-foreground: 24 10% 55%;
+    --muted: 210 16% 95%;
+    --muted-foreground: 215 14% 47%;
 
-    --accent: 20 8% 14%;
-    --accent-foreground: 36 33% 90%;
+    --accent: 210 16% 93%;
+    --accent-foreground: 215 25% 15%;
 
     --destructive: 0 72% 51%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 24 12% 14%;
-    --input: 24 12% 17%;
-    --ring: 38 92% 50%;
+    --border: 214 18% 89%;
+    --input: 214 18% 85%;
+    --ring: 199 89% 48%;
 
     --radius: 0.5rem;
 
     /* Status Colors */
-    --cyan: 175 84% 40%;
-    --green: 152 69% 40%;
-    --yellow: 38 92% 50%;
+    --cyan: 187 85% 43%;
+    --green: 160 84% 39%;
+    --yellow: 43 96% 56%;
     --red: 0 72% 51%;
-    --purple: 280 68% 60%;
+    --purple: 262 83% 58%;
 
     /* Status dim backgrounds */
-    --green-dim: 152 40% 8%;
-    --yellow-dim: 38 40% 8%;
-    --red-dim: 0 40% 8%;
-    --purple-dim: 280 40% 8%;
-    --blue-dim: 175 40% 8%;
+    --green-dim: 160 50% 94%;
+    --yellow-dim: 43 60% 93%;
+    --red-dim: 0 50% 95%;
+    --purple-dim: 262 50% 95%;
+    --blue-dim: 199 60% 94%;
 
     /* Text hierarchy */
-    --text-primary: 36 33% 90%;
-    --text-secondary: 24 10% 55%;
-    --text-muted: 20 8% 38%;
+    --text-primary: 215 25% 15%;
+    --text-secondary: 215 14% 47%;
+    --text-muted: 215 12% 67%;
 
     /* Surface layers */
-    --surface: 20 10% 8%;
-    --surface-raised: 20 8% 11%;
-    --surface-overlay: 20 8% 14%;
-    --surface-inset: 20 12% 5%;
+    --surface: 0 0% 100%;
+    --surface-raised: 210 20% 98%;
+    --surface-overlay: 210 16% 95%;
+    --surface-inset: 210 20% 96%;
 
     /* Sidebar */
-    --sidebar-background: 20 14% 3%;
-    --sidebar-foreground: 24 10% 55%;
-    --sidebar-primary: 38 92% 50%;
-    --sidebar-primary-foreground: 20 14% 4%;
-    --sidebar-accent: 20 8% 12%;
-    --sidebar-accent-foreground: 36 33% 90%;
-    --sidebar-border: 24 12% 11%;
-    --sidebar-ring: 38 92% 50%;
+    --sidebar-background: 210 25% 97%;
+    --sidebar-foreground: 215 14% 47%;
+    --sidebar-primary: 199 89% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 16% 93%;
+    --sidebar-accent-foreground: 215 25% 15%;
+    --sidebar-border: 214 18% 89%;
+    --sidebar-ring: 199 89% 48%;
   }
 }
 
