@@ -72,6 +72,71 @@
     --sidebar-border: 214 18% 89%;
     --sidebar-ring: 199 89% 48%;
   }
+
+  .dark {
+    --background: 215 28% 7%;
+    --foreground: 210 20% 90%;
+
+    --card: 215 25% 10%;
+    --card-foreground: 210 20% 90%;
+
+    --popover: 215 25% 10%;
+    --popover-foreground: 210 20% 90%;
+
+    --primary: 199 89% 48%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 215 20% 16%;
+    --secondary-foreground: 210 16% 72%;
+
+    --muted: 215 20% 14%;
+    --muted-foreground: 215 14% 55%;
+
+    --accent: 215 20% 16%;
+    --accent-foreground: 210 20% 90%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 215 20% 18%;
+    --input: 215 20% 20%;
+    --ring: 199 89% 48%;
+
+    /* Status Colors */
+    --cyan: 187 85% 50%;
+    --green: 160 84% 45%;
+    --yellow: 43 96% 56%;
+    --red: 0 72% 55%;
+    --purple: 262 83% 65%;
+
+    /* Status dim backgrounds */
+    --green-dim: 160 40% 12%;
+    --yellow-dim: 43 40% 12%;
+    --red-dim: 0 40% 12%;
+    --purple-dim: 262 40% 14%;
+    --blue-dim: 199 40% 12%;
+
+    /* Text hierarchy */
+    --text-primary: 210 20% 90%;
+    --text-secondary: 215 14% 55%;
+    --text-muted: 215 12% 40%;
+
+    /* Surface layers */
+    --surface: 215 25% 10%;
+    --surface-raised: 215 25% 12%;
+    --surface-overlay: 215 20% 14%;
+    --surface-inset: 215 28% 8%;
+
+    /* Sidebar */
+    --sidebar-background: 215 28% 8%;
+    --sidebar-foreground: 215 14% 55%;
+    --sidebar-primary: 199 89% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 215 20% 14%;
+    --sidebar-accent-foreground: 210 20% 90%;
+    --sidebar-border: 215 20% 18%;
+    --sidebar-ring: 199 89% 48%;
+  }
 }
 
 @layer base {
@@ -146,6 +211,16 @@
     linear-gradient(to right, hsla(214, 18%, 89%, 0.5) 1px, transparent 1px),
     linear-gradient(to bottom, hsla(214, 18%, 89%, 0.5) 1px, transparent 1px);
   background-size: 20px 20px;
+}
+.dark .bg-grid {
+  background-image:
+    linear-gradient(to right, hsla(215, 20%, 18%, 0.6) 1px, transparent 1px),
+    linear-gradient(to bottom, hsla(215, 20%, 18%, 0.6) 1px, transparent 1px);
+}
+
+/* Scanline dark override */
+.dark .scanline::after {
+  background: linear-gradient(90deg, transparent, hsla(199, 89%, 48%, 0.1), transparent);
 }
 
 /* Scan Line Animation */
