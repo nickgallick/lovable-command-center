@@ -101,9 +101,9 @@ function DeskScene({ agent }: { agent: Agent }) {
       {/* Plant */}
       {hasPlant && (
         <>
-          <rect x="22" y="80" width="10" height="8" rx="1" fill="hsl(217, 33%, 20%)" />
-          <circle cx="27" cy="76" r="5" fill="hsl(142, 50%, 30%)" />
-          <circle cx="24" cy="78" r="3" fill="hsl(142, 50%, 25%)" />
+          <rect x="22" y="80" width="10" height="8" rx="1" fill="hsl(24, 12%, 17%)" />
+          <circle cx="27" cy="76" r="5" fill="hsl(152, 50%, 30%)" />
+          <circle cx="24" cy="78" r="3" fill="hsl(152, 50%, 25%)" />
         </>
       )}
       {/* Sticky notes */}
