@@ -109,8 +109,8 @@ function DeskScene({ agent }: { agent: Agent }) {
       {/* Sticky notes */}
       {hasStickyNotes && (
         <>
-          <rect x="10" y="24" width="14" height="12" rx="1" fill="hsl(48, 96%, 47%)" opacity="0.3" transform="rotate(-5 17 30)" />
-          <rect x="12" y="40" width="14" height="12" rx="1" fill="hsl(217, 91%, 60%)" opacity="0.2" transform="rotate(3 19 46)" />
+          <rect x="10" y="24" width="14" height="12" rx="1" fill="hsl(38, 92%, 50%)" opacity="0.3" transform="rotate(-5 17 30)" />
+          <rect x="12" y="40" width="14" height="12" rx="1" fill="hsl(38, 92%, 50%)" opacity="0.15" transform="rotate(3 19 46)" />
         </>
       )}
       {/* Figurines */}
