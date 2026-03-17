@@ -26,12 +26,12 @@ function DeskScene({ agent }: { agent: Agent }) {
   return (
     <svg viewBox="0 0 200 120" className="w-full h-auto">
       {/* Desk surface */}
-      <rect x="20" y="88" width="160" height="6" rx="2" fill="hsl(24, 12%, 14%)" />
+      <rect x="20" y="88" width="160" height="6" rx="2" fill="hsl(214, 18%, 89%)" />
       {/* Monitor stand */}
-      <rect x="88" y="80" width="24" height="8" rx="2" fill="hsl(24, 12%, 14%)" />
+      <rect x="88" y="80" width="24" height="8" rx="2" fill="hsl(214, 18%, 89%)" />
 
       {/* Main monitor */}
-      <rect x="40" y="20" width="120" height="60" rx="4" fill="hsl(20, 10%, 6%)" stroke="hsl(24, 12%, 14%)" strokeWidth="1.5" />
+      <rect x="40" y="20" width="120" height="60" rx="4" fill="hsl(210, 20%, 96%)" stroke="hsl(214, 18%, 89%)" strokeWidth="1.5" />
       <rect x="44" y="24" width="112" height="52" rx="2" fill={cfg.screenFill} opacity={cfg.screenOpacity} className={cfg.screenClass} />
 
       {/* Code lines on active screen */}
