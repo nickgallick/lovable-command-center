@@ -37,14 +37,14 @@ function DeskScene({ agent }: { agent: Agent }) {
       {/* Code lines on active screen */}
       {agent.status === 'active' && (
         <>
-          <rect x="50" y="30" width="40" height="2" rx="1" fill="hsl(220, 30%, 6%)" opacity="0.4" />
-          <rect x="50" y="36" width="60" height="2" rx="1" fill="hsl(220, 30%, 6%)" opacity="0.3" />
-          <rect x="50" y="42" width="35" height="2" rx="1" fill="hsl(220, 30%, 6%)" opacity="0.4" />
-          <rect x="50" y="48" width="55" height="2" rx="1" fill="hsl(220, 30%, 6%)" opacity="0.3" />
-          <rect x="50" y="54" width="45" height="2" rx="1" fill="hsl(220, 30%, 6%)" opacity="0.4" />
-          <rect x="50" y="60" width="50" height="2" rx="1" fill="hsl(220, 30%, 6%)" opacity="0.3" />
+          <rect x="50" y="30" width="40" height="2" rx="1" fill="hsl(20, 14%, 4%)" opacity="0.4" />
+          <rect x="50" y="36" width="60" height="2" rx="1" fill="hsl(20, 14%, 4%)" opacity="0.3" />
+          <rect x="50" y="42" width="35" height="2" rx="1" fill="hsl(20, 14%, 4%)" opacity="0.4" />
+          <rect x="50" y="48" width="55" height="2" rx="1" fill="hsl(20, 14%, 4%)" opacity="0.3" />
+          <rect x="50" y="54" width="45" height="2" rx="1" fill="hsl(20, 14%, 4%)" opacity="0.4" />
+          <rect x="50" y="60" width="50" height="2" rx="1" fill="hsl(20, 14%, 4%)" opacity="0.3" />
           {/* Cursor blink */}
-          <rect x="110" y="48" width="6" height="2" rx="1" fill="hsl(217, 91%, 60%)" opacity="0.8">
+          <rect x="110" y="48" width="6" height="2" rx="1" fill="hsl(38, 92%, 50%)" opacity="0.8">
             <animate attributeName="opacity" values="0.8;0.2;0.8" dur="1s" repeatCount="indefinite" />
           </rect>
         </>
@@ -52,15 +52,15 @@ function DeskScene({ agent }: { agent: Agent }) {
       {/* Error icon */}
       {agent.status === 'error' && (
         <>
-          <polygon points="100,32 108,46 92,46" fill="none" stroke="hsl(0, 84%, 60%)" strokeWidth="1.5" />
-          <text x="100" y="44" textAnchor="middle" fill="hsl(0, 84%, 60%)" fontSize="8" fontWeight="bold">!</text>
+          <polygon points="100,32 108,46 92,46" fill="none" stroke="hsl(0, 72%, 51%)" strokeWidth="1.5" />
+          <text x="100" y="44" textAnchor="middle" fill="hsl(0, 72%, 51%)" fontSize="8" fontWeight="bold">!</text>
         </>
       )}
       {/* Loading bar for building/deploying */}
       {(agent.currentState === 'Deploying' || agent.currentState === 'Testing') && (
         <>
-          <rect x="60" y="48" width="80" height="4" rx="2" fill="hsl(217, 33%, 17%)" />
-          <rect x="60" y="48" width="52" height="4" rx="2" fill="hsl(217, 91%, 60%)">
+          <rect x="60" y="48" width="80" height="4" rx="2" fill="hsl(24, 12%, 14%)" />
+          <rect x="60" y="48" width="52" height="4" rx="2" fill="hsl(38, 92%, 50%)">
             <animate attributeName="width" values="20;60;20" dur="2s" repeatCount="indefinite" />
           </rect>
         </>
