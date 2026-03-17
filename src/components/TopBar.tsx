@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion';
+import { Sun, Moon } from 'lucide-react';
 import { agents, builds, deployments, spendData, alerts } from '@/data/mockData';
+import { useTheme } from '@/hooks/use-theme';
 
 const MetricPill = ({ label, value, color }: { label: string; value: string | number; color: string }) => (
   <div className="flex items-center gap-2 px-3 py-1.5 bg-card rounded-lg border border-border">
@@ -13,6 +15,7 @@ export function TopBar() {
   const activeBuilds = builds.filter(b => b.status === 'active').length;
   const healthyDeploys = deployments.filter(d => d.status === 'healthy').length;
   const errors24h = alerts.filter(a => a.severity === 'critical' && !a.resolved).length;
+  const { theme, toggleTheme } = useTheme();
 
   const now = new Date();
   const timeStr = now.toLocaleTimeString('en-US', { hour12: false, hour: '2-digit', minute: '2-digit', second: '2-digit' });
@@ -39,8 +42,15 @@ export function TopBar() {
         <MetricPill label="ERRORS" value={errors24h} color={errors24h > 0 ? 'text-red' : 'text-green'} />
       </div>
 
-      {/* Right: Clock + Model + Avatar */}
+      {/* Right: Theme toggle + Clock + Model + Avatar */}
       <div className="flex items-center gap-3">
+        <button
+          onClick={toggleTheme}
+          className="w-7 h-7 rounded-md border border-border bg-card flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
+          aria-label="Toggle theme"
+        >
+          {theme === 'light' ? <Moon className="w-3.5 h-3.5" /> : <Sun className="w-3.5 h-3.5" />}
+        </button>
         <span className="font-mono text-xs text-muted-foreground tabular-nums">{timeStr}</span>
         <span className="text-[10px] font-mono px-2 py-1 rounded-md bg-purple-dim text-purple border border-purple/20 font-medium">
           SONNET 4.6
