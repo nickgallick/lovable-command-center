@@ -75,10 +75,10 @@ function DeskScene({ agent }: { agent: Agent }) {
       )}
 
       {/* Keyboard */}
-      <rect x="60" y="96" width="80" height="10" rx="2" fill="hsl(24, 12%, 14%)" stroke="hsl(24, 12%, 18%)" strokeWidth="0.5" />
+      <rect x="60" y="96" width="80" height="10" rx="2" fill="hsl(214, 18%, 89%)" stroke="hsl(214, 18%, 85%)" strokeWidth="0.5" />
       {/* Typing indicator */}
       {agent.status === 'active' && (
-        <rect x="85" y="99" width="4" height="4" rx="1" fill="hsl(38, 92%, 50%)" opacity="0.5">
+        <rect x="85" y="99" width="4" height="4" rx="1" fill="hsl(199, 89%, 48%)" opacity="0.5">
           <animate attributeName="opacity" values="0.5;1;0.5" dur="0.3s" repeatCount="indefinite" />
         </rect>
       )}
