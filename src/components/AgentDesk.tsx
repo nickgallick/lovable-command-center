@@ -84,15 +84,15 @@ function DeskScene({ agent }: { agent: Agent }) {
       )}
 
       {/* Coffee mug */}
-      <ellipse cx="175" cy="94" rx="8" ry="3" fill="hsl(24, 12%, 14%)" />
-      <rect x="167" y="94" width="16" height="12" rx="2" fill="hsl(24, 12%, 14%)" />
+      <ellipse cx="175" cy="94" rx="8" ry="3" fill="hsl(214, 18%, 89%)" />
+      <rect x="167" y="94" width="16" height="12" rx="2" fill="hsl(214, 18%, 89%)" />
       {/* Steam */}
       {agent.status === 'active' && (
         <>
-          <path d="M172,90 C172,86 174,84 174,80" fill="none" stroke="hsl(24, 10%, 55%)" strokeWidth="0.5" opacity="0.3">
+          <path d="M172,90 C172,86 174,84 174,80" fill="none" stroke="hsl(215, 14%, 47%)" strokeWidth="0.5" opacity="0.3">
             <animate attributeName="opacity" values="0.1;0.4;0.1" dur="2s" repeatCount="indefinite" />
           </path>
-          <path d="M176,91 C176,87 178,85 178,81" fill="none" stroke="hsl(24, 10%, 55%)" strokeWidth="0.5" opacity="0.2">
+          <path d="M176,91 C176,87 178,85 178,81" fill="none" stroke="hsl(215, 14%, 47%)" strokeWidth="0.5" opacity="0.2">
             <animate attributeName="opacity" values="0.1;0.3;0.1" dur="2.5s" repeatCount="indefinite" />
           </path>
         </>
