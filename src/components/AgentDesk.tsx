@@ -69,7 +69,7 @@ function DeskScene({ agent }: { agent: Agent }) {
       {/* Dual monitor */}
       {hasDualMonitor && (
         <>
-          <rect x="170" y="30" width="20" height="30" rx="2" fill="hsl(20, 10%, 6%)" stroke="hsl(24, 12%, 14%)" strokeWidth="1" />
+          <rect x="170" y="30" width="20" height="30" rx="2" fill="hsl(210, 20%, 96%)" stroke="hsl(214, 18%, 89%)" strokeWidth="1" />
           <rect x="172" y="32" width="16" height="26" rx="1" fill={cfg.screenFill} opacity={cfg.screenOpacity * 0.6} />
         </>
       )}
