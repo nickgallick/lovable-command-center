@@ -143,8 +143,8 @@
 /* Background Grid */
 .bg-grid {
   background-image:
-    linear-gradient(to right, hsla(217, 33%, 17%, 0.12) 1px, transparent 1px),
-    linear-gradient(to bottom, hsla(217, 33%, 17%, 0.12) 1px, transparent 1px);
+    linear-gradient(to right, hsla(24, 12%, 14%, 0.12) 1px, transparent 1px),
+    linear-gradient(to bottom, hsla(24, 12%, 14%, 0.12) 1px, transparent 1px);
   background-size: 20px 20px;
 }
 
@@ -161,7 +161,7 @@
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, hsla(217, 91%, 60%, 0.04), transparent);
+  background: linear-gradient(90deg, transparent, hsla(38, 92%, 50%, 0.04), transparent);
   animation: scanline 5s linear infinite;
   pointer-events: none;
   z-index: 100;
@@ -169,8 +169,8 @@
 
 /* Pulse glow for healthy tiles */
 @keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 0 1px hsla(142, 71%, 45%, 0.15); }
-  50% { box-shadow: 0 0 0 1px hsla(142, 71%, 45%, 0.3), 0 0 12px -3px hsla(142, 71%, 45%, 0.1); }
+  0%, 100% { box-shadow: 0 0 0 1px hsla(152, 69%, 40%, 0.15); }
+  50% { box-shadow: 0 0 0 1px hsla(152, 69%, 40%, 0.3), 0 0 12px -3px hsla(152, 69%, 40%, 0.1); }
 }
 
 .pulse-healthy {
@@ -198,14 +198,14 @@
 
 /* Status dot glow */
 .dot-glow-green {
-  box-shadow: 0 0 6px 2px hsla(142, 71%, 45%, 0.4);
+  box-shadow: 0 0 6px 2px hsla(152, 69%, 40%, 0.4);
 }
 .dot-glow-yellow {
-  box-shadow: 0 0 6px 2px hsla(48, 96%, 47%, 0.4);
+  box-shadow: 0 0 6px 2px hsla(38, 92%, 50%, 0.4);
 }
 .dot-glow-red {
-  box-shadow: 0 0 6px 2px hsla(0, 84%, 60%, 0.4);
+  box-shadow: 0 0 6px 2px hsla(0, 72%, 51%, 0.4);
 }
 .dot-glow-blue {
-  box-shadow: 0 0 6px 2px hsla(217, 91%, 60%, 0.4);
+  box-shadow: 0 0 6px 2px hsla(175, 84%, 40%, 0.4);
 }
