@@ -157,7 +157,7 @@ function MiniSparkline({ data, color }: { data: number[]; color: string }) {
 
 export function AgentDesk({ agent }: { agent: Agent }) {
   const cfg = statusConfig[agent.status];
-  const sparkColor = agent.status === 'active' ? 'hsl(152, 69%, 40%)' : agent.status === 'error' ? 'hsl(0, 72%, 51%)' : 'hsl(20, 8%, 38%)';
+  const sparkColor = agent.status === 'active' ? 'hsl(160, 84%, 39%)' : agent.status === 'error' ? 'hsl(0, 72%, 51%)' : 'hsl(215, 12%, 67%)';
 
   return (
     <motion.div

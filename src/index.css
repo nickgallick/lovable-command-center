@@ -198,14 +198,14 @@
 
 /* Status dot glow */
 .dot-glow-green {
-  box-shadow: 0 0 6px 2px hsla(152, 69%, 40%, 0.4);
+  box-shadow: 0 0 6px 2px hsla(160, 84%, 39%, 0.3);
 }
 .dot-glow-yellow {
-  box-shadow: 0 0 6px 2px hsla(38, 92%, 50%, 0.4);
+  box-shadow: 0 0 6px 2px hsla(43, 96%, 56%, 0.3);
 }
 .dot-glow-red {
-  box-shadow: 0 0 6px 2px hsla(0, 72%, 51%, 0.4);
+  box-shadow: 0 0 6px 2px hsla(0, 72%, 51%, 0.3);
 }
 .dot-glow-blue {
-  box-shadow: 0 0 6px 2px hsla(175, 84%, 40%, 0.4);
+  box-shadow: 0 0 6px 2px hsla(199, 89%, 48%, 0.3);
 }
